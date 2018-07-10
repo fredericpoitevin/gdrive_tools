@@ -1,0 +1,9 @@
+#!/bin/bash
+# ===* upload2gdrive *===
+# This tool recursively uploads the input directory to Google Drive.
+# ========================================================/
+for resources in "./gd.prm" "./gd.lib"; do if [ ! -f $resources ]; then echo "ERROR: $resource not found here $PWD"; exit; else source $resources; fi; done
+if [ $# -ne 1 ]; then echo "Provide the directory name that you want to upload to gdrive"; exit; fi
+function main() { upload_recursive "$1"; }
+main "$1"
+# the end!

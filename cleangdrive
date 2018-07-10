@@ -1,0 +1,11 @@
+#!/bin/bash
+# ===* cleangdrive *===
+# This tool assumes you used upload2gdrive.sh to recursively upload a directory to Google Drive.
+# It checks that no file has been duplicated in the cloud, and makes sure only one version is there,
+# and it keeps the compressed version of it, if it exists.
+# ========================================================/
+for resources in "./gdprm.sh" "./gdlib.sh"; do if [ ! -f $resources ]; then echo "ERROR: $resource not found here $PWD"; exit; else source $resources; fi; done
+if [ $# -ne 1 ]; then echo "Provide the directory name that you want to clean on gdrive"; exit; fi
+function main() { clean_recursive "$1"; }
+main "$1"
+# the end!
