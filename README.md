@@ -15,7 +15,8 @@ gdrive mkdir [dirname] > [dirname].id
 
 ## Run
 ```
-upload2gdrive [directory name (relative path from here, or absolute path)]
+upload2gdrive [dirname] 
+#(relative path from here, or absolute path)
 ```
 
 # SLURM manager
