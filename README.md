@@ -21,6 +21,6 @@ upload2gdrive [directory name (relative path from here, or absolute path)]
 # SLURM manager
 since gdrive gets stuck often, a workaround is to rerun in periodically. Do:
 ```
-sbatch launch.sh
-sbatch launch_control.sh
+sbatch launch.slurm
+sbatch launch_control.slurm
 ```
