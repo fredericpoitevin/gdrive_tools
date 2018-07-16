@@ -31,7 +31,16 @@ Say you want to upload the directory `[dirname]` (where this is the relative pat
 ```
 gdrive mkdir [dirname] > [dirname].id
 ```
-*Note*: if you want to upload `[dirname]` under a parent ID in your gdrive, find the ID to the parent and use `-p` option. 
+*Note*: if you want to upload `[dirname]` under a parent ID in your gdrive, find the ID to the parent and use `-p` option. See the test provided here: we have the following tree:
+```
+gd_test
+      |
+      --> dir_to_upload
+                      |
+                      --> d1
+                      --> d2
+                      --> d3
+``` 
 
 ## Run <a id='upload_run'></a>
 ```
