@@ -8,4 +8,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --gres gpu:1
 #
+# srun [script filename] [arguments]
+#
+# Example: upload directory run2 
 srun ./upload2gdrive run2
+#
+# ===== the END.

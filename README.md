@@ -24,6 +24,9 @@ cute_line="<==========>"
 ```
 
 # Upload directory recursively <a id='upload'></a>
+
+Say you want to upload the directory `[dirname]` (where this is the relative path from the script to the directory you want to upload). You first need to create the directory *in the cloud*, using `gdrive mkdir`, and storing the output of that command in `[dirname].id`, where you retain the full relative path. All the information needed by `upload2gdrive` is now in place, so you just need to run `upload2gdrive [dirname]`. See below for a few more comments.
+
 ## Initialize <a id='upload_init'></a>
 ```
 gdrive mkdir [dirname] > [dirname].id
