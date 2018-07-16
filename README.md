@@ -1,17 +1,12 @@
 # gdrive_tools
 a set of scripts that help me use the [gdrive](https://github.com/prasmussen/gdrive) CLI.
 
-[Setup](#setup)
-
-[Upload a directory recursively](#upload)
-
-   [Initialize](#upload_init)
-
-   [Run](#upload_run)
-
-[Using with SLURM manager](#slurm)
-
-[Acknowledgements](#acknowledgements)
+* [Setup](#setup)
+* [Upload a directory recursively](#upload)
+  * [Initialize](#upload_init)
+  * [Run](#upload_run)
+* [Using with SLURM manager](#slurm)
+* [Acknowledgements](#acknowledgements)
 
 # Setup <a id='setup'></a>
 Make sure `gdprm.sh` and `gdlib.sh` are found when running main scripts.
