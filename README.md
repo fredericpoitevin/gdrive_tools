@@ -3,7 +3,7 @@ a set of scripts that help me use the [gdrive](https://github.com/prasmussen/gdr
 
 [Setup](#setup)
 
-#</a id='setup'></a> Setup
+#<a id='setup'></a> Setup
 Make sure `gdprm.sh` and `gdlib.sh` are found when running main scripts.
 
 Check `gdprm.sh` for its content and edit accordingly. `GD` points to your [gdrive](https://github.com/prasmussen/gdrive) executable. Make sure it is installed. `quiet` defines the verbose level of the script. `dry_run` defines whether the actions planned are executed. 
