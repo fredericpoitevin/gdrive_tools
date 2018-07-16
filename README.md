@@ -4,14 +4,26 @@ a set of scripts that help me use the gdrive CLI
 heavy use of [prasmussen](https://github.com/prasmussen/gdrive) gdrive tool (not maintained anymore).
 
 # Setup
-Check `gdprm.sh` for its content and edit accordingly. Make sure `gdprm.sh` and `gdlib.sh` are found when running main scripts.
+Make sure `gdprm.sh` and `gdlib.sh` are found when running main scripts.
+
+Check `gdprm.sh` for its content and edit accordingly. `GD` points to your [gdrive](https://github.com/prasmussen/gdrive) executable. Make sure it is installed. `quiet` defines the verbose level of the script. `dry_run` defines whether the actions planned are executed. 
+```#!/bin/bash
+# 
+GD=~/Toolkit/gdrive/gdrive
+nlinemax=1000000
+quiet=false
+dry_run=false
+logsymlinks="zymlinks.log"
+cute_line="<==========>"
+#
+```
 
 # Upload directory recursively
 ## Initialize
 ```
 gdrive mkdir [dirname] > [dirname].id
 ```
-*Note*: if you want to upload `[dirname]` under a parent ID in your gdrive, find the ID to the parent and use `-p` option.
+*Note*: if you want to upload `[dirname]` under a parent ID in your gdrive, find the ID to the parent and use `-p` option. 
 
 ## Run
 ```
