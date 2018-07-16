@@ -4,7 +4,7 @@ a set of scripts that help me use the gdrive CLI
 heavy use of [prasmussen](https://github.com/prasmussen/gdrive) gdrive tool (not maintained anymore).
 
 # Setup
-Check `gd.prm` for its content and edit accordingly. Make sure `gd.prm` and `gd.lib` are found when running main scripts.
+Check `gdprm.sh` for its content and edit accordingly. Make sure `gdprm.sh` and `gdlib.sh` are found when running main scripts.
 
 # Upload directory recursively
 ## Initialize

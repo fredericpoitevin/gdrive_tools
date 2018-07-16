@@ -1,4 +1,7 @@
 #!/bin/bash
+# !!!!!!!!!!!!!!!!!!!!
+# Not fully tested ...
+# !!!!!!!!!!!!!!!!!!!!
 # ===* cleangdrive *===
 # This tool assumes you used upload2gdrive.sh to recursively upload a directory to Google Drive.
 # It checks that no file has been duplicated in the cloud, and makes sure only one version is there,
