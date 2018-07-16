@@ -1,9 +1,9 @@
 # gdrive_tools
-a set of scripts that help me use the gdrive CLI
+a set of scripts that help me use the [gdrive](https://github.com/prasmussen/gdrive) CLI.
 
-heavy use of [prasmussen](https://github.com/prasmussen/gdrive) gdrive tool (not maintained anymore).
+[Setup](#setup)
 
-# Setup
+#</a id='setup'></a> Setup
 Make sure `gdprm.sh` and `gdlib.sh` are found when running main scripts.
 
 Check `gdprm.sh` for its content and edit accordingly. `GD` points to your [gdrive](https://github.com/prasmussen/gdrive) executable. Make sure it is installed. `quiet` defines the verbose level of the script. `dry_run` defines whether the actions planned are executed. 
@@ -37,3 +37,7 @@ since gdrive gets stuck often, a workaround is to rerun in periodically. Do:
 sbatch launch.slurm
 sbatch launch_control.slurm
 ```
+
+# Acknowledgments
+
+This relies exclusively on [prasmussen](https://github.com/prasmussen/gdrive) gdrive tool (not maintained anymore).
