@@ -22,6 +22,6 @@ fi
 #
 # ---- RUN ----
 # upload recursively
-function main() { jobid="$RANDOM"; upload_recursive "$1 $jobid $do_compress"; }
+function main() { jobid="$RANDOM"; upload_recursive $1 $jobid $do_compress; }
 main "$1"
 # the end!

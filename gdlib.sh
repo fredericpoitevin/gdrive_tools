@@ -81,7 +81,7 @@ function clear_local_lists() { for mimetype in "dir" "file"; do rm -f local_${1}
 function print_parent_list() {
   vartmp="="; if [ "$2" != "dir" ]; then vartmp="!$vartmp"; fi
   echo "$( $GD list -m $nlinemax --name-width 0 --query " '$( get_id "$1" )' in parents and mimeType $vartmp 'application/vnd.google-apps.folder'" | awk '{print $1" "$2}')" > parent_${4}_${2}.list
-  if [ "$3" == "listname" ]; then mv parent_${2}.list parent_tmp.list; cat parent_tmp.list | awk '{print $2}' > parent_${4}_${2}.list; rm -f parent_tmp.list; fi
+  if [ "$3" == "listname" ]; then mv parent_${4}_${2}.list parent_tmp.list; cat parent_tmp.list | awk '{print $2}' > parent_${4}_${2}.list; rm -f parent_tmp.list; fi
 }
 #>>>
 
@@ -126,6 +126,7 @@ function do_upload() {
 #<<< FUNCTION UPLOAD_RECURSIVE
 #... upload content of dir recursively. Second argument is a random jobid.
 function upload_recursive() {
+#echo $1 $2
 jobid=${2}
 do_compress=${3:-1}
 if proceed $1; then # proceed only if directory has been initiated (check presence of $1.id)
@@ -146,7 +147,7 @@ if proceed $1; then # proceed only if directory has been initiated (check presen
   clear_local_lists ${jobid}
   # !!! Now traverse
   for dir in $list_dir; do dir="${1}/$dir"
-    upload_recursive "${dir} ${jobid} ${do_compress}"
+    upload_recursive ${dir} ${jobid} ${do_compress}
   done
 fi
 }
