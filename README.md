@@ -41,6 +41,16 @@ gd_test
                       --> d2
                       --> d3
 ``` 
+We first need to find the gdrive ID of directory `gd_test` where we want to upload `dir_to_upload`:
+```
+[fpoitevi@langev2]$ gdrive list -q "name ='gdt_test'"
+Id                                  Name       Type   Size   Created
+19Wlag7uIw2rmGzVp1nhgsjGkXY8YxnvL   gdt_test   dir           2018-07-16 16:51:31
+```
+Now we can create a directory called `dir_to_upload` in gdrive under `gd_test`:
+```
+gdrive mkdir -p 19Wlag7uIw2rmGzVp1nhgsjGkXY8YxnvL dir_to_upload > dir_to_upload.id
+```
 
 ## Run <a id='upload_run'></a>
 ```
