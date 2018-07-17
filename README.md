@@ -5,6 +5,7 @@ a set of scripts that help me use the [gdrive](https://github.com/prasmussen/gdr
 * [Upload a directory recursively](#upload)
   * [Initialize](#upload_init)
   * [Run](#upload_run)
+    * [Options](#upload_run_options)
 * [Using with SLURM manager](#slurm)
 * [Acknowledgements](#acknowledgements)
 
@@ -158,6 +159,13 @@ Running a second time would give:
 <==========>
 @gdt_test/dir_to_upload/d3 -> Directories: 0 | Files: 1 | Link: 1
 ```
+
+### Options <a id='upload_run_options'></a>
+
+By default, the files will be *gzipped* before being uploaded. If you prefer to avoid the compression step, provide `0` as a second argument to `upload2gdrive`:
+```
+./upload2gdrive [dirname] 0
+``` 
 
 # SLURM manager <a id='slurm'></a>
 since gdrive gets stuck often, a workaround is to rerun in periodically. After properly editing the line starting with `srun` in `launch.slurm`, do:
